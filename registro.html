@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemma Finance — Únete</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">♦ Gemma Finance</a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="conocenos.html" class="nav-link">Sobre nosotros</a>
+                <a href="tarjetas.html" class="nav-link">Productos</a>
+                <a href="registro.html" class="nav-link active">Únete</a>
+                <a href="index.html#login-section" class="nav-link">Banca en Línea</a>
+            </nav>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="btn-theme" aria-label="Cambiar tema">
+                    <span class="icon-sun">☀️</span>
+                    <span class="icon-moon">🌙</span>
+                </button>
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-padding">
+        <section class="contact-section">
+            <div class="container grid-2 item-center">
+                <div>
+                    <h2 class="section-title">Comienza tu registro</h2>
+                    <p class="section-subtitle">Nuestra plataforma adapta los campos de captura e interacciones según la naturaleza legal de tu cuenta.</p>
+                    
+                    <div class="toggle-container">
+                        <button type="button" class="toggle-btn active" id="btn-fisica">Persona Física</button>
+                        <button type="button" class="toggle-btn" id="btn-moral">Persona Moral</button>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="join-form">
+                    <input type="hidden" id="account-type" value="fisica">
+
+                    <div class="form-group">
+                        <label for="user-email">Correo Electrónico de Contacto</label>
+                        <input type="email" id="user-email" required placeholder="correo@ejemplo.com">
+                    </div>
+
+                    <div id="fields-fisica">
+                        <div class="form-group">
+                            <label for="full-name">Nombre Completo</label>
+                            <input type="text" id="full-name" placeholder="Tu nombre completo">
+                        </div>
+                        <div class="form-group">
+                            <label for="curp">CURP</label>
+                            <input type="text" id="curp" placeholder="18 caracteres alfanuméricos" maxlength="18">
+                        </div>
+                    </div>
+
+                    <div id="fields-moral" class="hidden-fields">
+                        <div class="form-group">
+                            <label for="company-name">Razón Social (Empresa)</label>
+                            <input type="text" id="company-name" placeholder="Ej. Logística Avanzada S.A.">
+                        </div>
+                        <div class="form-group">
+                            <label for="rfc-moral">RFC de la Empresa</label>
+                            <input type="text" id="rfc-moral" placeholder="Estructura de 12 posiciones" maxlength="12">
+                        </div>
+                        <div class="form-group">
+                            <label for="legal-rep">Representante Legal autorizado</label>
+                            <input type="text" id="legal-rep" placeholder="Nombre completo del apoderado">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Teléfono de Contacto</label>
+                        <input type="tel" id="phone" required placeholder="10 dígitos">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-full">Enviar Solicitud Digital</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2026 Ecosistemas Financieros Avanzados. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
